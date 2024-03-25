@@ -1,12 +1,14 @@
 package joueur;
 
 import box.Color;
+import power.Power;
 
 public class Pion {
 	public int position;
 	public Color color;
 	public int ptVie;
 	public int resistance;
+	public Power power;
 	
 	public Pion(Color color) {
 		this.position = 0;
@@ -30,5 +32,8 @@ public class Pion {
 		if(toSet>resistance) {
 			ptVie -= toSet-resistance;
 		}
+	}
+	public void setPower(Power power) {
+		this.power = power;
 	}
 }

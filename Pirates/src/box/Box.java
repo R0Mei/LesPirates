@@ -1,6 +1,7 @@
 package box;
 
 import joueur.Pion;
+import tools.Affichage;
 
 public abstract class Box {
     protected int position;
@@ -12,4 +13,9 @@ public abstract class Box {
     }
     
 	abstract void action(Pion pion);
+
+	void action(Pion pion, Affichage affichage) {
+		// TODO Auto-generated method stub
+		
+	}
 }

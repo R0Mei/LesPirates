@@ -17,26 +17,42 @@ public class GetPower extends Box{
 		switch(pouvoir) {
 		case 0:
 			return new Ichibi();
+		case 1:
+			return new Nibi();
+		case 2:
+			return new Sanbi();
+		case 3:
+			return new Yonbi();
+		case 4:
+			return new Gobi();
+		case 5:
+			return new Rokubi();
+		case 6:
+			return new Nanabi();
+		case 7:
+			return new Hachibi();
+		case 8:
+			return new Kyubi();
 		}
+		return null;
 	}
 
 	@Override
-	void action(Pion pion,Affichage affichage) {
+	void action(Pion pion, Affichage affichage) {
 		do {
 			rand = Random.getRandom(9);
 		}while(rand == alreadyUse);
 		 Power pouvoir = creerPouvoir(rand);
 		 pion.setPower(pouvoir);
-		 affichage.affichageGetPower(pouvoir.getName());
+		 Affichage.affichageGetPower(pouvoir.getName());
+		 
 		
 		
-		
-		
-		switch(rand) {
-		case 0 :
-			Affichage.affichageGetPower(Ichibi.getName());
-		}
-		
+	}
+
+	@Override
+	void action(Pion pion) {
+		// TODO Auto-generated method stub
 		
 	}
 

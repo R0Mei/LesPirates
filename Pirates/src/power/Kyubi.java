@@ -1,9 +1,9 @@
 package power;
 
-public class Kyûbi extends Power{
+public class Kyubi extends Power{
 
-	public Kyûbi() {
-		super("Kyûbi", Element.Feu);
+	public Kyubi() {
+		super("Kyubi", Element.Feu);
 		// TODO Auto-generated constructor stub
 	}
 
