@@ -21,7 +21,7 @@ public class Kyubi extends Power{
 
 	@Override
 	public int resistance() {
-		return 0;
+		return 20;
 	}
 
 	@Override
