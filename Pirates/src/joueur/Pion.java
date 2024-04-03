@@ -53,16 +53,16 @@ public class Pion {
 	}
 	
 	public void setVitesse(int vitesse) {
-		this.vitesse = vitesse;
+		this.vitesse += vitesse;
 	}
 	
 	public void setMaxChakra(int maxChakra) {
-		this.maxChakra += maxChakra;
 		if(this.maxChakra == this.chakra) {
-			removeChakra(maxChakra);
-		}else if(this.maxChakra-maxChakra < this.chakra){
+			addChakra(maxChakra);
+		}else if(this.maxChakra+maxChakra < this.chakra){
 			removeChakra(this.chakra-(this.maxChakra-maxChakra));
 		}
+		this.maxChakra += maxChakra;
 	}
 	
 	public void addPV(int ptVie) {

@@ -14,7 +14,7 @@ public class BombBox extends Box{
 	}
 	@Override
 	public void action(Pion pion, Affichage affichage) {
-		int subit = 15;
+		int subit = 20;
 		Pion otherPlayer = otherPlayerHelper.getOtherPlayer(pion);
 		pion.removePV(subit);
 		affichage.affichageBombBox(pion.getName(),subit);

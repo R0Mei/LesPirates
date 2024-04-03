@@ -1,7 +1,7 @@
 package tools;
 
 public class Random {
-	private static java.util.Random rand;
+public static java.util.Random rand;
 	
 	public Random() {
 		rand = new java.util.Random();

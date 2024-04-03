@@ -59,12 +59,16 @@ public class GetPower extends Box {
 	        powersObtained.add(getPowerName(pouvoir));
 	        Power pouvoirObtenu = creerPouvoir(pouvoir, affichage);
 	        pion.setPower(pouvoirObtenu);
-	        affichage.displayMessage("Le joueur " + pion.getName() + " a obtenu le pouvoir " + pouvoirObtenu.getName() + ".");
-	        applyPower.applyStatistics(pion, pouvoirObtenu);
+	        if("Chuunins".equals(pion.getPower().getName())) {
+	        	affichage.displayMessage("Le joueur "+pion.getName()+" n'a pas réussi à obtenir un pouvoir... Les bijuus l'ont rejeté");
+	        }else {
+	        	affichage.displayMessage("Le joueur " + pion.getName() + " a obtenu le pouvoir " + pouvoirObtenu.getName() + ".");
+	        	applyPower.applyStatistics(pion, pouvoirObtenu);
+	        }
     	}
     	else {
-    		pion.addPV(10);
-    		affichage.displayMessage("Le joueur " + pion.getName() + " a récupéré 10 pv car il possède déjà le pouvoir de "+pion.getPower().getName()+".");
+    		pion.addPV(5);
+    		affichage.displayMessage("Le joueur " + pion.getName() + " a récupéré 5 pv car il possède déjà le pouvoir de "+pion.getPower().getName()+".");
     	}
 		affichage.afficherRecapitulatif(pion, otherPlayer, affichage);
     }
