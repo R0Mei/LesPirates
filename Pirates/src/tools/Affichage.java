@@ -65,4 +65,19 @@ public class Affichage implements IAffichage {
             displayMessage(boxInfo);
         }
     }
+    
+    public void affichageIntro() {
+    	displayMessage("JEU : Course Ninja\n");
+    	displayMessage("Course Ninja est un jeu de société pour deux joueurs où chacun incarne un ninja en quête de victoire.\nAffrontez-vous à travers le monde ninja dans une course palpitante pour atteindre la ligne d'arrivée\nou épuiser les points de vie de votre adversaire.\n\n");
+    	displayMessage("But du jeu :\n\nSoit le premier joueur à atteindre la ligne d'arrivée,\nsoit réduisez les points de vie de votre adversaire à zéro.\n");
+    	displayMessage("Déroulement du tour :\n\nÀ tour de rôle, chaque joueur lance un dé et avance son pion du nombre de cases indiqué par le dé,\nen tenant compte de sa vitesse.\n\n");
+    	displayMessage("Cases spéciales :\n");
+    	displayMessage("     Parchemin explosif : Si un joueur atterrit sur cette case, il perd 15 points de vie.\n     Pioche : Le joueur doit piocher trois cartes d'événements et en choisir une à appliquer immédiatement.\n     Pouvoir : Le joueur gagne les pouvoirs d'un bijuu, conférant des avantages spéciaux.\n     Combat : Si un joueur atterrit sur cette case, un combat est déclenché. Chaque joueur lance un dé pour déterminer ses dégâts infligés à son adversaire. Un seul round de combat est effectué.\n\n");
+    	displayMessage("Statistiques des joueurs :\n");
+    	displayMessage("     Points de vie : Chaque joueur commence avec 100 points de vie et perd des points en fonction des événements du jeu.\r\n"
+    			+ "     Dégâts : Les dégâts déterminent la force des attaques du joueur.\r\n"
+    			+ "     Résistance : Réduit les dégâts reçus.\r\n"
+    			+ "     Chakra max : Limite maximale de chakra qu'un joueur peut avoir.\r\n"
+    			+ "     Vitesse : Augmente le résultat des dés pour avancer sur le plateau.");
+    }
 }

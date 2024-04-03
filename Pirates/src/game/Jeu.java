@@ -20,6 +20,10 @@ public class Jeu {
         this.applyPower = applyPower;
         affichage = new Affichage();
         entrer = new Entrer();
+    	affichage.affichageIntro();
+    	affichage.displayMessage("\n\n\nAppuyez sur Entrée pour continuer ...");
+    	entrer.waitForEnter();
+    	affichage.displayMessage("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         initializePlayers();
         Map mapGenerator = new Map(this, applyPower);
         map = mapGenerator.createMap();
@@ -55,8 +59,8 @@ public class Jeu {
         int diceResult = rollDice();
         affichage.displayMessage("\n\n\n\n\n\n\n\n\n\n\n\n\n\n"+player1.getName() + " a lancé les dés et a obtenu un " + diceResult + ".");
         player1.setPosition(diceResult);
-        affichage.displayMessage("Il est sur la case n°"+player1.getPosition()+".\n");
         Box currentBox = map.get(player1.getPosition());
+        affichage.displayMessage("Il est sur la case "+player1.getPosition()+" "+currentBox.getName()+".\n");
         currentBox.action(player1, affichage);
         affichage.displayMessage("Appuyez sur Entrée pour continuer ....");
         entrer.waitForEnter();
@@ -81,9 +85,4 @@ public class Jeu {
         return player2;
     }
 
-    public static void main(String[] args) {
-    	ApplyPower applyPower = new ApplyPower();
-        Jeu jeu = new Jeu(applyPower);
-        jeu.startGame();
-    }
 }

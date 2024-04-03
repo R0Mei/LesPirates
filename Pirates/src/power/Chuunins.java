@@ -5,7 +5,7 @@ import tools.Affichage;
 
 public class Chuunins extends Power{
 	public Chuunins(Affichage affichage) {
-		super("Ninja", Element.Neutral,affichage);
+		super("Chuunins", Element.Neutral,affichage);
 
 	}
 
@@ -92,12 +92,12 @@ public class Chuunins extends Power{
 
 	@Override
 	public int getDamageAbility2(Pion pion) {
-		return 10+pion.getDegat();
+		return 10+(pion.getDegat()*2);
 	}
 
 	@Override
 	public int getDamageAbility3(Pion pion) {
-		return 15+pion.getDegat();
+		return 15+(pion.getDegat()*3);
 	}
 
 }

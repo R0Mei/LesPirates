@@ -10,12 +10,12 @@ public class Ichibi extends Power{
 
 	@Override
 	public int pv() {
-		return 10;
+		return 30;
 	}
 
 	@Override
 	public int degat() {
-		return 0;
+		return 20;
 	}
 
 	@Override
@@ -30,7 +30,7 @@ public class Ichibi extends Power{
 
 	@Override
 	public int chakra() {
-		return 0;
+		return 20;
 	}
 	@Override
 	public void ability1(Pion pion, Pion otherPlayer) {
@@ -90,12 +90,12 @@ public class Ichibi extends Power{
 
 	@Override
 	public int getDamageAbility2(Pion pion) {
-		return 15+pion.getDegat();
+		return 15+(pion.getDegat()*2);
 	}
 
 	@Override
 	public int getDamageAbility3(Pion pion) {
-		return 40+pion.getDegat();
+		return 40+(pion.getDegat()*3);
 	}
 
 }

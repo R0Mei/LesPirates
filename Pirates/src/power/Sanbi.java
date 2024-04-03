@@ -11,7 +11,7 @@ public class Sanbi extends Power{
 
 	@Override
 	public int pv() {
-		return 20;
+		return 30;
 	}
 
 	@Override
@@ -91,12 +91,12 @@ public class Sanbi extends Power{
 
 	@Override
 	public int getDamageAbility2(Pion pion) {
-		return 15+pion.getDegat();
+		return 15+(pion.getDegat()*2);
 	}
 
 	@Override
 	public int getDamageAbility3(Pion pion) {
-		return 40+pion.getDegat();
+		return 40+(pion.getDegat()*3);
 	}
 
 }

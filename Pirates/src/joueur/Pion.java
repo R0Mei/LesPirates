@@ -58,18 +58,27 @@ public class Pion {
 	
 	public void setMaxChakra(int maxChakra) {
 		this.maxChakra += maxChakra;
+		if(this.maxChakra == this.chakra) {
+			removeChakra(maxChakra);
+		}else if(this.maxChakra-maxChakra < this.chakra){
+			removeChakra(this.chakra-(this.maxChakra-maxChakra));
+		}
 	}
 	
 	public void addPV(int ptVie) {
 		this.ptVie += ptVie;
 	}
 	public void removePV(int toSet) {
-		ptVie -= toSet*((100-resistance)/100);
+		double result = toSet * (1 - (double) resistance / 100);
+	    this.ptVie -= (int) Math.round(result);
 	}
 	
 	public void addDegat(int degat) {
 	    double result = this.degat * (1 + (double) degat / 100);
 	    this.degat = (int) Math.round(result);
+	}
+	public void removeDegat(int degat) {
+		this.degat-=degat;
 	}
 
 	
